@@ -1,0 +1,40 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 22%;
+    min-width: 22%;
+    background-color: #262626;
+    color: #ffff;
+    @include el(header) {
+        margin-bottom: em(80px);
+        padding: em(20px);
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.nav-Items {
+    @include flex-dis(column, null, center);
+    width: 100%;
+    @include el(list) {
+        @include mod(hide) {
+            display: none;
+        }
+        @include mod(show) {
+            display: block;
+        }
+    }
+    @include el(link) {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        width: 100%;
+        color: #ffff;
+        &:hover {
+            background-color: map-get($back-color, menu-linkHover);
+        }
+    }
+}
+
+.show {
+    display: flex;
+}
