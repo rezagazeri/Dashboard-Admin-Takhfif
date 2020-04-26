@@ -30,7 +30,7 @@
         width: 100%;
         color: #ffff;
         &:hover {
-            background-color: map-get($back-color, menu-linkHover);
+            // background-color: map-get($back-color, menu-linkHover);
         }
     }
 }

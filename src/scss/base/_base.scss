@@ -1,5 +1,4 @@
 @include font-face(Shabnam, Shabnam);
-
 *,
 *:before,
 *:after {
@@ -11,8 +10,10 @@ html {
 }
 
 body {
-    font-family: "shabnam";
-
+    font-family: $fontfamily;
+    font-size: $default--font;
+    color: $color-gray-dark-1;
+    background-color: $color-gray-light-1;
 }
 
 a {

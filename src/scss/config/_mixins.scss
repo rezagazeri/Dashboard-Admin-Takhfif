@@ -70,11 +70,16 @@
 }
 
 //==============set image for div background====================================
-@mixin set-image($name, $h, $w, $size, $format) {
+@mixin set-image($name,
+$h,
+$w,
+$size,
+$format) {
     background-image: url("#{$img-path}/#{$name}.#{$format}");
     width: $w;
     height: $h;
     background-repeat: no-repeat;
     background-size: $size;
-
 }
+
+//========================font-family and fontsize===============================

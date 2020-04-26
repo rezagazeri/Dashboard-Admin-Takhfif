@@ -157,8 +157,8 @@ export default {
             icon: 'icon-star',
             id: 23,
             children: [{
-                    name: 'Login',
-                    url: '/login',
+                    name: 'ورود',
+                    url: '/signin',
                     icon: 'icon-star',
                     id: 24
 

@@ -1,0 +1,84 @@
+.inp-box {
+    @include flex-dis(row, center, null);
+    position: relative;
+    margin: 1.5rem 0;
+    @include el(lable) {
+        font-family: 'shabnam';
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: .75rem;
+        margin-right: 2rem;
+        ;
+        color: $color-gray-light-1;
+    }
+    @include el(input) {
+        font-size: 1.1rem;
+        font-family: inherit;
+        background-color: $color-gray-light-2;
+        color: inherit;
+        border: none;
+        border-radius: 20px;
+        width: 95%;
+        height: 2rem;
+        transition: all .2s;
+        margin-left: -2.5rem;
+        padding: 1rem 2rem;
+        border-bottom: 2px solid transparent;
+        display: block;
+        &:focus,
+        &:hover {
+            outline: none;
+            border-bottom: 2px solid $color-blue-dark-1;
+        }
+        &:focus:valid {
+            border-bottom: 2px solid $valid-color;
+        }
+        &focus::-webkit-input-placeholder {
+            font-weight: 100;
+            font-size: inherit;
+            color: $color-gray-light-4;
+        }
+    }
+    &__input:focus+&__btn {
+        background-color: $color-gray-light-3;
+    }
+    @include el(btn) {
+        border: none;
+        background-color: $color-gray-light-2;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translatey(2px);
+        }
+    }
+    @include el(icon) {
+        @include dim(2rem, 2rem);
+        fill: $color-gray-light-3;
+    }
+}
+
+.has-error {
+    position: absolute;
+    display: block;
+    right: 100%;
+    bottom: 60%;
+    margin-right: -160px;
+    margin-bottom: 10px;
+    background: #ef5662;
+    white-space: nowrap;
+    padding: 9px 25px;
+    color: #fff;
+    z-index: 2;
+    &:before {
+        width: 0;
+        height: 0;
+        border-color: #ef5662 transparent transparent;
+        border-style: solid;
+        border-width: 10px 12px 0;
+        top: 100%;
+        right: 35px;
+        content: "";
+        position: absolute;
+    }
+}

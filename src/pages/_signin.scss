@@ -1,0 +1,39 @@
+.signin-box {
+    background-color: $color-gray-light-2;
+    padding: 5rem 0;
+    height: 100vh;
+}
+
+.signin {
+    max-width: 40%;
+    box-shadow: 0rem 1rem 2rem $color-gray-dark-2;
+    margin: auto;
+    padding: 2rem;
+    background: $color-blue-dark-2;
+    // color: map-get($font-color, $secondery);
+    border-radius: 15px;
+    @include el(header) {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        span {
+            font-family: 'shabnam';
+            color: $color-gray-light-1;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+    @include el(form) {
+        @include flex-dis(column, center, center);
+    }
+    @include el(resetpassword) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+}
+
+.recaptch-container {
+    margin: 0 0 10px 10px;
+}
